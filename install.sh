@@ -40,7 +40,7 @@ pip install softlayer
 
 # IBM Cloud CLI
 echo ">> ibmcloud"
-curl -fsSL https://clis.ng.bluemix.net/install/linux > /tmp/bxinstall.sh
+curl -fsSL https://clis.cloud.ibm.com/install/linux > /tmp/bxinstall.sh
 sh /tmp/bxinstall.sh
 rm /tmp/bxinstall.sh
 
@@ -137,37 +137,37 @@ rm -f linux_amd64.zip
 mkdir -p /root/mnt/config
 
 # IBM Cloud CLI configuration
-rm /root/.bluemix/config.json
+rm /root/.ibmcloud/config.json
 touch /root/mnt/config/bx-config.json
-ln -s /root/mnt/config/bx-config.json /root/.bluemix/config.json
+ln -s /root/mnt/config/bx-config.json /root/.ibmcloud/config.json
 
 # IBM Cloud CF configuration
-rm /root/.bluemix/.cf/config.json
+rm /root/.ibmcloud/.cf/config.json
 touch /root/mnt/config/cf-config.json
-ln -s /root/mnt/config/cf-config.json /root/.bluemix/.cf/config.json
+ln -s /root/mnt/config/cf-config.json /root/.ibmcloud/.cf/config.json
 
 # IBM Cloud Cloud Functions configuration
 touch /root/mnt/config/wsk.props
 ln -s /root/mnt/config/wsk.props /root/.wskprops
 
-rm -f /root/.bluemix/plugins/cloud-functions/config.json
+rm -f /root/.ibmcloud/plugins/cloud-functions/config.json
 mkdir /root/mnt/config/cloud-functions
 touch /root/mnt/config/cloud-functions/config.json
-ln -s /root/mnt/config/cloud-functions/config.json /root/.bluemix/plugins/cloud-functions/config.json
+ln -s /root/mnt/config/cloud-functions/config.json /root/.ibmcloud/plugins/cloud-functions/config.json
 
 # IBM Cloud container-registry
 mkdir /root/mnt/config/container-registry
-ln -s /root/mnt/config/container-registry/config.json /root/.bluemix/plugins/container-registry/config.json
+ln -s /root/mnt/config/container-registry/config.json /root/.ibmcloud/plugins/container-registry/config.json
 
 # IBM Cloud container-service
 mkdir /root/mnt/config/container-service
-ln -s /root/mnt/config/container-service/config.json /root/.bluemix/plugins/container-service/config.json
-ln -s /root/mnt/config/container-service/clusters /root/.bluemix/plugins/container-service/clusters
+ln -s /root/mnt/config/container-service/config.json /root/.ibmcloud/plugins/container-service/config.json
+ln -s /root/mnt/config/container-service/clusters /root/.ibmcloud/plugins/container-service/clusters
 
 # IBM Cloud vpc-infrastructure
-rm -f /root/.bluemix/plugins/vpc-infrastructure/config.json
+rm -f /root/.ibmcloud/plugins/vpc-infrastructure/config.json
 mkdir /root/mnt/config/vpc-infrastructure
-ln -s /root/mnt/config/vpc-infrastructure/config.json /root/.bluemix/plugins/vpc-infrastructure/config.json
+ln -s /root/mnt/config/vpc-infrastructure/config.json /root/.ibmcloud/plugins/vpc-infrastructure/config.json
 
 # SoftLayer CLI
 touch /root/mnt/config/slcli.conf
@@ -175,7 +175,7 @@ ln -s /root/mnt/config/slcli.conf /root/.softlayer
 
 # IBM Cloud SoftLayer service
 mkdir /root/mnt/config/softlayer
-ln -s /root/mnt/config/softlayer /root/.bluemix/plugins/softlayer
+ln -s /root/mnt/config/softlayer /root/.ibmcloud/plugins/softlayer
 
 # Helm configuration
 mkdir /root/mnt/config/helm
