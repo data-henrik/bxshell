@@ -8,17 +8,17 @@ export PS1="\[$reset\]\
 bxshell[\
 $bold\
 (\$BXSHELL_TARGET) \
-g:\$(cat ~/.bluemix/config.json | jq .ResourceGroup.Name -r) > \
-r:\$(cat ~/.bluemix/config.json | jq .Region -r) > \
-o:\$(cat ~/.bluemix/.cf/config.json | jq .OrganizationFields.Name -r) > \
-s:\$(cat ~/.bluemix/.cf/config.json | jq .SpaceFields.Name -r)\
+g:\$(cat ~/.ibmcloud/config.json | jq .ResourceGroup.Name -r) > \
+r:\$(cat ~/.ibmcloud/config.json | jq .Region -r) > \
+o:\$(cat ~/.ibmcloud/.cf/config.json | jq .OrganizationFields.Name -r) > \
+s:\$(cat ~/.ibmcloud/.cf/config.json | jq .SpaceFields.Name -r)\
 $reset\
 ]\
 \n\
 \w> "
 
-# Bluemix CLI
-bx plugin repo-add Bluemix https://plugins.ng.bluemix.net
+# IBM Cloud CLI
+bx plugin repo-add IBMCloud https://plugins.cloud.ibm.com/
 
 # Auto completion
 . /usr/local/ibmcloud/autocomplete/bash_autocomplete
